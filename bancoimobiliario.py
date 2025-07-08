@@ -1,8 +1,8 @@
 
-
-# Variáveis
+# Imports
 import time
 
+# Variáveis
 
 resposta = ""
 deposito = 0
@@ -17,28 +17,31 @@ menu = """
 [4] Sair
 
 => """
-
 # Código
-opcao = input(menu)
 
-if opcao == "1":
-   deposito = int(input("Digite o depósito que você deseja fazer:"))
-   saldo += deposito
-   print("Seu saldo após este depósito é de:", saldo)
 
-elif opcao == "2":
-    print("Seu saldo é de:", saldo)
-    sacar = float(input("Quanto você deseja sacar?"))
-    saldo -= sacar
-    print("Agora você tem:", saldo)
+while True:  # Loop principal
+    opcao = input(menu)
 
-elif opcao == "3":
-    print("Seu saldo é de:", saldo)
-    resposta = input("Deseja sair?")
-    if resposta.lower() == "sair":
-        print(menu)
+    if opcao == "1":
+        deposito = int(input("Digite o depósito que você deseja fazer:"))
+        saldo += deposito
+        print("Seu saldo após este depósito é de:", saldo)
 
-elif opcao == "4":
-   print("Obrigado por usar nosso sistema!")
-   print("Saindo em 3 segundos.")
-   time.sleep(3)
+    elif opcao == "2":
+        print("Seu saldo é de:", saldo)
+        sacar = float(input("Quanto você deseja sacar?"))
+        saldo -= sacar
+        print("Agora você tem:", saldo)
+
+    elif opcao == "3":
+        print("Seu saldo é de:", saldo)
+        resposta = input("Deseja sair?")
+        if resposta.lower() == "sair":
+            print(menu)
+
+    elif opcao == "4":
+        print("Obrigado por usar nosso sistema!")
+        print("Saindo em 3 segundos.")
+        time.sleep(3)
+        break
