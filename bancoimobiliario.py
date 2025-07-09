@@ -20,7 +20,7 @@ menu = """
 # Código
 
 
-while True:  # Loop principal
+while True:
     opcao = input(menu)
 
     if opcao == "1":
