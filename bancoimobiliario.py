@@ -34,14 +34,20 @@ while True:
         saldo -= sacar
         print("Agora você tem:", saldo)
 
-    elif opcao == "3":
+    elif opcao == "3":    
         print("Seu saldo é de:", saldo)
         resposta = input("Deseja sair?")
         if resposta.lower() == "sair":
             print(menu)
+        else:
+            print("Error 54")
+
 
     elif opcao == "4":
         print("Obrigado por usar nosso sistema!")
         print("Saindo em 3 segundos.")
         time.sleep(3)
+    else:
+        print("Error 54")
         break
+    
